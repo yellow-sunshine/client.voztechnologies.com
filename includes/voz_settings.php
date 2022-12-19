@@ -1,0 +1,1 @@
+../../../shared_files/voz_settings.php

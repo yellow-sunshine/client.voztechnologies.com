@@ -1,0 +1,18 @@
+Options +FollowSymlinks
+RewriteEngine on
+RewriteBase /
+
+# Force http
+RewriteCond %{SERVER_PORT} 443
+RewriteRule ^(.*)$ http://client.voztechnologies.com/$1 [R=301,L]
+
+#Force www:
+RewriteCond %{HTTP_HOST} ^admin.blr.pw [NC]
+RewriteRule ^(.*)$ http://client.voztechnologies.com/$1 [L,R=301,NC]
+
+
+
+
+
+php_flag opcache.enable Off
+php_value max_execution_time 60
